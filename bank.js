@@ -26,10 +26,16 @@ class BankAccount {
   }
   deposit(n) {
     this.balance += n;
+    // This function is not only mutating internal state, but
+    // in order to "remember" state we have to mutate yet another
+    // variable.
     this.transactions.push(new Transaction(new Date(), n));
   }
   withdrawal(n) {
     this.balance -= n;
+    // This function is not only mutating internal state, but
+    // in order to "remember" state we have to mutate yet another
+    // variable.
     this.transactions.push(new Transaction(new Date(), -n));
   }
   getTransactions() {

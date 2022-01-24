@@ -24,4 +24,5 @@ test("changeOwnerName", () => {
   expect(account.owners[0].getName()).toEqual("a");
   account.changeOwnerName(0, "b");
   expect(account.owners[0].getName()).toEqual("b");
+  // What was the owner?
 });
