@@ -16,8 +16,8 @@ class Transaction {
   }
 }
 class BankAccount {
-  constructor(owner) {
-    this.owner = owner;
+  constructor(owners) {
+    this.owners = owners;
     this.balance = 0;
     this.transactions = [];
   }
@@ -41,8 +41,8 @@ class BankAccount {
     account.withdrawal(otherBalance);
   
   }
-  changeOwnerName(newName) {
-    this.owner.setName(newName);
+  changeOwnerName(i, newName) {
+    this.owners[i].setName(newName);
   }
 }
 
